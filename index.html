@@ -12,7 +12,7 @@
 <body>
 <header class="header"><div class="left"><span class="rec"></span><input id="title" value="動画編集指示書" aria-label="タイトル"></div><div class="actions"><span id="saveState" class="hint"></span><button id="copyBtn" class="btn" disabled>指示書をコピー</button><button id="pdfBtn" class="btn primary" disabled>PDFを作成して送る</button></div></header>
 <main class="main">
-<section id="composer" class="composer"><div id="composerHead" class="head">新しいポイントを追加</div><div class="grid"><div><div class="paste" id="paste"><label class="emptyPhoto" for="file"><span class="plus">＋</span><span>タップして写真を選ぶ</span><span class="sub">PCはコピーして ⌘V でも貼り付け可</span></label></div><label class="upload" id="uploadLabel">写真を選ぶ / 撮影<input id="file" type="file" accept="image/*,.heic,.heif" autocomplete="off"></label><div id="stampNotice" class="stampNotice"><b>写真を選ぶとスタンプ編集できます</b><br>矢印・丸・四角・文字・色変更・戻す・全消しが使えます。</div><div id="stampTools" class="stampTools"><div class="stampTitle">スタンプ</div><div class="stampRows"><button type="button" class="stampBtn active" data-tool="arrow-r">→</button><button type="button" class="stampBtn" data-tool="arrow-l">←</button><button type="button" class="stampBtn" data-tool="arrow-u">↑</button><button type="button" class="stampBtn" data-tool="arrow-d">↓</button><button type="button" class="stampBtn" data-tool="rotate-r">↻</button><button type="button" class="stampBtn" data-tool="rotate-l">↺</button><button type="button" class="stampBtn" data-tool="circle">○</button><button type="button" class="stampBtn" data-tool="rect">□</button><button type="button" class="stampBtn" data-tool="text">T</button><button type="button" class="miniBtn" id="undoStamp">戻す</button><button type="button" class="miniBtn" id="clearStamp">全消し</button></div><div class="stampRows" style="margin-top:8px"><button type="button" class="colorBtn active" data-color="#ffea00" style="background:#ffea00"></button><button type="button" class="colorBtn" data-color="#ff1717" style="background:#ff1717"></button><button type="button" class="colorBtn" data-color="#178cff" style="background:#178cff"></button><button type="button" class="colorBtn" data-color="#12c94b" style="background:#12c94b"></button><button type="button" class="colorBtn" data-color="#ffffff" style="background:#ffffff"></button></div><div class="stampHint">矢印は上下左右、回転矢印も使えます。写真の上をタップすると配置できます。</div></div><div id="photoStatus" class="photoStatus"></div></div><div class="fields"><div class="field"><label>使う動画（ファイル名・タイトル）</label><input id="clip" placeholder="例：GX010008.MP4 ／ 順突き 基本"></div><div class="field"><label>使用区間（開始 〜 終了）</label><div class="range"><input id="inMin" class="num" inputmode="numeric" placeholder="分"><span>:</span><input id="inSec" class="num" inputmode="numeric" placeholder="秒"><span>〜</span><input id="outMin" class="num" inputmode="numeric" placeholder="分"><span>:</span><input id="outSec" class="num" inputmode="numeric" placeholder="秒"></div><span class="hint">分・秒を数字で入力（例：0 分 5 秒 → 0:05）</span></div><div class="field"><label>編集指示</label><textarea id="instruction" placeholder="例：突きが当たる瞬間でスロー。腰の回転に黄色い矢印を重ねる。"></textarea></div><div class="rowActions"><label class="important"><input id="important" type="checkbox">重要マーク</label><div class="spacer"></div><button id="cancelBtn" class="btn" style="display:none">キャンセル</button><button id="addBtn" class="btn primary" disabled>追加する</button></div></div></div></section>
+<section id="composer" class="composer"><div id="composerHead" class="head">新しいポイントを追加</div><div class="grid"><div><div class="paste" id="paste"><label class="emptyPhoto" for="file"><span class="plus">＋</span><span>タップして写真を選ぶ</span><span class="sub">PCはコピーして ⌘V でも貼り付け可</span></label></div><label class="upload" id="uploadLabel">写真を選ぶ / 撮影<input id="file" type="file" accept="image/*,.heic,.heif" autocomplete="off"></label><div id="stampNotice" class="stampNotice"><b>写真を選ぶとスタンプ編集できます</b><br>矢印・丸・四角・文字・色変更・戻す・全消しが使えます。</div><div id="stampTools" class="stampTools"><div class="stampTitle">スタンプ</div><div class="stampRows"><button type="button" class="stampBtn active" data-tool="arrow-r">→</button><button type="button" class="stampBtn" data-tool="arrow-l">←</button><button type="button" class="stampBtn" data-tool="arrow-u">↑</button><button type="button" class="stampBtn" data-tool="arrow-d">↓</button><button type="button" class="stampBtn" data-tool="curve-dr">⤿</button><button type="button" class="stampBtn" data-tool="curve-dl">⤾</button><button type="button" class="stampBtn" data-tool="circle">○</button><button type="button" class="stampBtn" data-tool="rect">□</button><button type="button" class="stampBtn" data-tool="text">T</button><button type="button" class="miniBtn" id="undoStamp">戻す</button><button type="button" class="miniBtn" id="clearStamp">全消し</button></div><div class="stampRows" style="margin-top:8px"><button type="button" class="colorBtn active" data-color="#ffea00" style="background:#ffea00"></button><button type="button" class="colorBtn" data-color="#ff1717" style="background:#ff1717"></button><button type="button" class="colorBtn" data-color="#178cff" style="background:#178cff"></button><button type="button" class="colorBtn" data-color="#12c94b" style="background:#12c94b"></button><button type="button" class="colorBtn" data-color="#ffffff" style="background:#ffffff"></button></div><div class="stampHint">矢印は上下左右、下向き回転矢印も使えます。写真の上をタップすると配置できます。</div></div><div id="photoStatus" class="photoStatus"></div></div><div class="fields"><div class="field"><label>使う動画（ファイル名・タイトル）</label><input id="clip" placeholder="例：GX010008.MP4 ／ 順突き 基本"></div><div class="field"><label>使用区間（開始 〜 終了）</label><div class="range"><input id="inMin" class="num" inputmode="numeric" placeholder="分"><span>:</span><input id="inSec" class="num" inputmode="numeric" placeholder="秒"><span>〜</span><input id="outMin" class="num" inputmode="numeric" placeholder="分"><span>:</span><input id="outSec" class="num" inputmode="numeric" placeholder="秒"></div><span class="hint">分・秒を数字で入力（例：0 分 5 秒 → 0:05）</span></div><div class="field"><label>編集指示</label><textarea id="instruction" placeholder="例：突きが当たる瞬間でスロー。腰の回転に黄色い矢印を重ねる。"></textarea></div><div class="rowActions"><label class="important"><input id="important" type="checkbox">重要マーク</label><div class="spacer"></div><button id="cancelBtn" class="btn" style="display:none">キャンセル</button><button id="addBtn" class="btn primary" disabled>追加する</button></div></div></div></section>
 <div id="list"></div><footer id="footer" class="footer"></footer>
 </main>
 <div id="lightbox" class="modal"><img id="lightImg"><button class="btn close" id="closeLight">閉じる ×</button></div>
@@ -93,22 +93,27 @@ async function drawStamp(x,y){
     ctx.fill();
   }
 
-  function drawRotateArrow(clockwise){
-    const r=size*0.48;
-    const start=clockwise ? Math.PI*1.12 : Math.PI*1.88;
-    const end=clockwise ? Math.PI*0.12 : Math.PI*0.88;
+  function drawDownCurveArrow(toRight){
+    // ⤿ / ⤾ のような、下向きに回り込む太い矢印
+    const r=size*0.52;
+    const sx=toRight ? x-r*.82 : x+r*.82;
+    const sy=y-r*.56;
+    const ex=x;
+    const ey=y+r*.68;
+    const c1x=toRight ? x-r*.72 : x+r*.72;
+    const c1y=y-r*.10;
+    const c2x=toRight ? x-r*.18 : x+r*.18;
+    const c2y=y+r*.58;
     ctx.beginPath();
-    ctx.arc(x,y,r,start,end,!clockwise);
+    ctx.moveTo(sx,sy);
+    ctx.bezierCurveTo(c1x,c1y,c2x,c2y,ex,ey);
     ctx.stroke();
-    const tipA=end;
-    const tx=x+Math.cos(tipA)*r;
-    const ty=y+Math.sin(tipA)*r;
-    const tangent=clockwise ? tipA+Math.PI/2 : tipA-Math.PI/2;
-    const head=size*0.34;
+    const head=size*0.38;
+    const tangent=toRight ? Math.PI*.58 : Math.PI*.42; // 下向き先端に合う角度
     ctx.beginPath();
-    ctx.moveTo(tx,ty);
-    ctx.lineTo(tx+Math.cos(tangent+Math.PI*0.78)*head,ty+Math.sin(tangent+Math.PI*0.78)*head);
-    ctx.lineTo(tx+Math.cos(tangent-Math.PI*0.78)*head,ty+Math.sin(tangent-Math.PI*0.78)*head);
+    ctx.moveTo(ex,ey);
+    ctx.lineTo(ex+Math.cos(tangent+Math.PI*0.72)*head,ey+Math.sin(tangent+Math.PI*0.72)*head);
+    ctx.lineTo(ex+Math.cos(tangent-Math.PI*0.72)*head,ey+Math.sin(tangent-Math.PI*0.72)*head);
     ctx.closePath();
     ctx.fill();
   }
@@ -117,8 +122,8 @@ async function drawStamp(x,y){
   else if(stampTool==='arrow-l'){drawLineArrow(Math.PI)}
   else if(stampTool==='arrow-u'){drawLineArrow(-Math.PI/2)}
   else if(stampTool==='arrow-d'){drawLineArrow(Math.PI/2)}
-  else if(stampTool==='rotate-r'){drawRotateArrow(true)}
-  else if(stampTool==='rotate-l'){drawRotateArrow(false)}
+  else if(stampTool==='curve-dr'){drawDownCurveArrow(true)}
+  else if(stampTool==='curve-dl'){drawDownCurveArrow(false)}
   else if(stampTool==='circle'){
     ctx.beginPath();
     ctx.arc(x,y,size*.48,0,Math.PI*2);
